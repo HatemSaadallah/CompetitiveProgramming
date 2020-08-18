@@ -76,3 +76,4 @@ int main()
     printArr(suffixArr, n); 
 
 }
+
