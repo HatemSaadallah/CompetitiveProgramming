@@ -11,11 +11,11 @@ struct row {
 } *cur = new row(), *prv = new row();
 
 string s;
-long bucket_spot[N]; // coordinate of bucket start
+long bucket_spot[N];
 
 bool cmp(long a, long b) { return s[a] < s[b]; }
 
-void bring_to_front(long e) { // Move element to start of its bucket
+void bring_to_front(long e) {
   long bucket = prv->bucket[prv->pos[e]];
   cur->pos[e] = bucket_spot[bucket]++;
   cur->elem[cur->pos[e]] = e;
@@ -38,17 +38,13 @@ void calc_suffix_array() {
 	else
 	  cur->bucket[i] = buckets++;
 
-  // Loop
   for (long delta = 1; buckets < n; delta *= 2) {
 	swap(cur, prv);
-	// Update bucket spots
 	for (long i = n - 1; i >= 0; --i)
 	  bucket_spot[prv->bucket[i]] = i;
-	// Lower last elements
 	for (long i = 0; i < delta; ++i)
 	  bring_to_front(n - i - 1);
 	// Sort elements
-	for (long i = 0; i < n; ++i) {
 	  if (prv->elem[i] < delta) continue;
 	  bring_to_front(prv->elem[i] - delta);
 	}
