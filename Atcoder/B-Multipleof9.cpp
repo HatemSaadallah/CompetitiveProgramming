@@ -27,5 +27,12 @@ using namespace std;
 
 int32_t main(){
     fast
+    int n;
+    cin >> n;
+    if (n%9==0){
+        cout << "YES";
+    } else {
+        cout << "NO";
+    }
     return 0;
 }

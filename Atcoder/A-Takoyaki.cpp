@@ -25,7 +25,20 @@ using namespace std;
 #define rep(i,n) for(int i=0;i<n;i++)
 #define fast ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
 
+
+
 int32_t main(){
     fast
+    int N, X, T;
+    cin >> N >> X >> T;
+    const int temp = T;
+    while(N>0){
+        N-=X;
+        if (N>0)
+            T += temp;
+    }
+
+    cout << T;
+
     return 0;
 }
