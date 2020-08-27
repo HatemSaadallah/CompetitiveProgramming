@@ -5,8 +5,6 @@
 #include <numeric>
 #include <bits/stdc++.h> 
 #include <math.h>
-#include <sstream>
-#include <iterator>
 
 using namespace std;
 #define endl ("\n")
@@ -27,5 +25,8 @@ using namespace std;
 
 int32_t main(){
     fast
+    int n1, n2, n3, n4;
+    cin >> n1 >> n2 >> n3 >> n4;
+    cout << n1+n2+n3+n4;
     return 0;
 }
