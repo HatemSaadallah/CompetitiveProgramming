@@ -30,13 +30,14 @@ int32_t main(){
     fast
 	int t;
 	cin >> t;
-	fixed;
-	setprecision(18);
+	cout << fixed << showpoint;
+	cout << setprecision(16);
 	while(t--){
 		double n1, n2;
 		cin >> n1 >> n2;
 		double res = n1/n2;
-		cout << res << endl; 
+		if((int)res == res) cout << (int)res << endl;
+		else cout << res << endl;
 	}
     return 0;
 }
