@@ -7,7 +7,6 @@
 #include <math.h>
 #include <sstream>
 #include <iterator>
-#include <iomanip> 
 
 using namespace std;
 #define endl ("\n")
@@ -28,11 +27,18 @@ using namespace std;
 
 int32_t main(){
     fast
-    cout << fixed;
-    cout << setprecision(16);
-    double vi;
-    cin >> vi;
-    double d = (vi*vi)/(2*9.8);
-    cout << d;
+	int t;
+	cin >> t;
+	vector<int> x;
+	int numberOfPass = 0;
+	while(t--){
+		int ai, bi;
+		cin >> ai >> bi;
+		numberOfPass -= ai;
+		numberOfPass += bi;
+		x.push_back(numberOfPass);
+	}
+	cout << *max_element(x.begin(), x.end());
     return 0;
 }
+
