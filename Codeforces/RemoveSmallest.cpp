@@ -3,7 +3,7 @@
 #include <string>
 #include <algorithm>
 #include <numeric>
-// #include <bits/stdc++.h> 
+#include <bits/stdc++.h> 
 #include <math.h>
 #include <sstream>
 #include <iterator>
@@ -25,8 +25,30 @@ using namespace std;
 #define rep(i,n) for(int i=0;i<n;i++)
 #define fast ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
 
+string checking(vector<int> &x){
+	sort(x.begin(), x.end());
+	for(int i = 0; i < x.size()-1; i++){
+		if(x[i+1]-x[i] > 1){
+			return "NO";			
+		}
+	}
+	return "YES";	
+}
+
 int32_t main(){
-    fast
-    return 0;
+	fast
+		int t;
+	cin >> t;
+	while(t--){
+		int ti; cin >> ti;
+		vector<int> x;
+		for(int i = 0; i < ti; i++){
+			int n;
+			cin >> n;
+			x.push_back(n);
+		}
+		cout << checking(x) << endl;
+	}
+	return 0;
 }
 
