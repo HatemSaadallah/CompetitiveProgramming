@@ -49,6 +49,6 @@ int32_t main(){
 		}
 		cout << checking(x) << endl;
 	}
-	return 0;
+	return 1;
 }
 
