@@ -38,10 +38,13 @@ struct debugger
 
 int32_t main() 
 {
-	int n;
-	cin >> n;
-
-	cout << n;
+	int t;
+	cin >> t;
+	while(t--){
+		int x, y, z;
+		cin >> x >> y >> z;
+	}
+	cout << t;
 }
 
 

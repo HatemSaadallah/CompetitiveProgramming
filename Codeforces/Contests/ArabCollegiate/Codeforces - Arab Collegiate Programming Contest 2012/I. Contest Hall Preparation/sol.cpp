@@ -1,16 +1,24 @@
-// Create your own template by modifying this file!
-#include <bits/stdc++.h>
+
+/**
+ *    author        : Hatem 
+ *    created       : September 05, 2020 10:15 PM
+ *    Problem Name  : I. Contest Hall Preparation
+ *    Problem Limit : 1000 ms , 256 MB
+ *    Problem Url   : https://codeforces.com/gym/100155/problem/I
+ *    @genarated by : ai-virtual-assistant
+**/
+
 #include <iostream>
 #include <vector>
 #include <string>
 #include <algorithm>
 #include <numeric>
+// #include <bits/stdc++.h> 
 #include <math.h>
 #include <sstream>
 #include <iterator>
 
 using namespace std;
-
 #define endl ("\n")
 #define pi (3.141592653589)
 #define mod 1000000007
@@ -25,23 +33,12 @@ using namespace std;
 #define min4(a, b, c, d) min(d, min(c, min(a, b)))
 #define rrep(i, n) for(int i=n-1;i>=0;i--)
 #define rep(i,n) for(int i=0;i<n;i++)
-#define fast ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr)
+#define fast ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
 
-struct debugger
-{
-    template<typename T> debugger& operator , (const T& v)
-    {    
-        cerr<<v<<" ";    
-        return *this;    
-    }
-} dbg;
-
-int32_t main() 
-{
-	int n;
-	cin >> n;
-
-	cout << n;
+int32_t main(){
+    fast
+    return 0;
 }
+
 
 

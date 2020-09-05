@@ -38,10 +38,17 @@ struct debugger
 
 int32_t main() 
 {
-	int n;
-	cin >> n;
-
-	cout << n;
+	int t;
+	cin >> t;
+	while(t--){
+		float a, b;	
+		cin >> a >> b;
+		if(a<b) swap(a, b);
+		a = a-b;
+		int res = ceil(a/10);
+		cout << res << endl;
+	}	
+	cout << t;
 }
 
 
