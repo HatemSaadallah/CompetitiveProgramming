@@ -29,22 +29,49 @@ using namespace std;
 
 struct debugger
 {
-    template<typename T> debugger& operator , (const T& v)
-    {    
-        cerr<<v<<" ";    
-        return *this;    
-    }
+	template<typename T> debugger& operator , (const T& v)
+	{    
+		cerr<<v<<" ";    
+		return *this;    
+	}
 } dbg;
-
 
 
 
 int32_t main() 
 {
-	int n;
-	cin >> n;
-
-	cout << n;
+	int t;
+	cin >> t;
+	while(t--){
+		int num;
+		cin >> num;
+		int zeroCount = 0, oneCount = 0;
+		int totalSize = 0;
+		while(num--){
+			int n;
+			cin >> n;
+			if(n==0){
+				zeroCount++;
+			}else{
+				oneCount++;
+			}
+			totalSize++;
+		}
+		if(zeroCount >= oneCount){
+			cout << zeroCount << endl;
+			while(zeroCount--){
+				cout << 0 << " ";
+			}
+			cout << endl;
+		}else {
+			if (oneCount%2==1) oneCount--;
+			cout << oneCount << endl;
+			while(oneCount--){
+				cout << 1 << " ";
+			}
+			cout << endl;
+		}	
+	}		
 }
 
 

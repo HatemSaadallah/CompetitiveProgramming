@@ -17,7 +17,7 @@ using namespace std;
 #define int long long
 #define float double
 #define pb push_back
-#define mp make_pair
+#define make_pair
 #define ff first
 #define ss second
 #define all(c) c.begin(), c.end()
@@ -36,14 +36,19 @@ struct debugger
     }
 } dbg;
 
+void solve(){
+
+}
+
 int32_t main() 
 {
 	int t;
 	cin >> t;
 	while(t--){
-		
+		solve();				
 	}
 	cout << t;
 }
+
 
 
