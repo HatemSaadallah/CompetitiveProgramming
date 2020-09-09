@@ -37,7 +37,13 @@ struct debugger
 } dbg;
 
 void solve(){
-
+	int t;
+	vector<int> x;
+	while(t--){
+		int n;
+		cin >> n;
+		x.push_back(n);
+	}
 }
 
 int32_t main() 
