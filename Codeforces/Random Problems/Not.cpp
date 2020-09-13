@@ -38,13 +38,10 @@ struct debugger
 
 int32_t main() 
 {
-    fast
 	int t;
 	cin >> t;
-	while(t--){
-		
-	}
-	cout << t;
+	if (t==0) cout << 1 << endl;
+    else cout << 0;
 }
 
 

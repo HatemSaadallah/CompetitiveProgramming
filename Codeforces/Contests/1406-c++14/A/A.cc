@@ -36,12 +36,39 @@ struct debugger
     }
 } dbg;
 
+int checkMex(vector<int> x){
+    for(int i = 0; i< x.size(); i++){
+        if (x[i] != i){
+            return i;
+        } 
+    }
+    return x[x.size()-1]+1;
+}
+
 int32_t main() 
 {
 	int t;
 	cin >> t;
-
-	cout << t;
+    while(t--){
+        int n;
+        cin >> n;
+        vector<int> x;
+        for (int k = 0; k < n; k++){
+            int m;
+            cin >> m;
+            x.push_back(m);
+        }
+        sort(x.begin(), x.end());
+        vector<int> x1, x2;
+        for(int i =0; i < x.size(); i++){
+            if(x[i]==0){
+                x1.push_back(x[i]);
+            } else{
+                x2.push_back(x[i]);
+            }
+        }
+        cout << checkMex(x1)+checkMex(x2) << endl;
+    }
 }
 
 

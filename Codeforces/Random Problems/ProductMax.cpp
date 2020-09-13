@@ -38,13 +38,14 @@ struct debugger
 
 int32_t main() 
 {
-    fast
-	int t;
-	cin >> t;
-	while(t--){
-		
-	}
-	cout << t;
+	int a, b, c, d;
+	cin >> a >> b >> c >> d;
+	vector<int> x;
+    x.push_back(a*c);
+    x.push_back(a*d);
+    x.push_back(b*c);
+    x.push_back(b*d);
+    cout << *max_element(x.begin(), x.end());
 }
 
 

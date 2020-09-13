@@ -23,25 +23,59 @@ using namespace std;
 #define all(c) c.begin(), c.end()
 #define min3(a, b, c) min(c, min(a, b))
 #define min4(a, b, c, d) min(d, min(c, min(a, b)))
-#define rrep(i, n) for(int i=n-1;i>=0;i--)
-#define rep(i,n) for(int i=0;i<n;i++)
+#define rrep(i, n) for (int i = n - 1; i >= 0; i--)
+#define rep(i, n) for (int i = 0; i < n; i++)
 #define fast ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr)
 
 struct debugger
 {
-    template<typename T> debugger& operator , (const T& v)
-    {    
-        cerr<<v<<" ";    
-        return *this;    
+    template <typename T>
+    debugger &operator,(const T &v)
+    {
+        cerr << v << " ";
+        return *this;
     }
 } dbg;
 
-int32_t main() 
+int32_t main()
 {
-	int t;
-	cin >> t;
-
-	cout << t;
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        vector<int> x;
+        while (n--)
+        {
+            int m;
+            cin >> m;
+            x.push_back(m);
+        }
+        sort(x.begin(), x.end());
+        int res = 1;
+        int count = 0, posCount = 1, negCount = 0;
+        for (int i = 0; i < x.size(); i++)
+        {
+            if (count < 5)
+            {
+                if (x[i] < 0)
+                {
+                    if (negCount % 2 == 0)
+                    {
+                        res *= x[i];
+                        count++;
+                        negCount++;
+                    }
+                }
+                else
+                {
+                    res *= x[x.size() - posCount];
+                    posCount++;
+                    count++;
+                }
+            }
+        }
+        cout << res << endl;
+    }
 }
-
-
