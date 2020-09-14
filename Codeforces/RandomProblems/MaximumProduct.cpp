@@ -1,63 +1,30 @@
-// Create your own template by modifying this file!
-#include <bits/stdc++.h>
-#include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
-#include <numeric>
-#include <math.h>
-#include <sstream>
-#include <iterator>
-
+#include<bits/stdc++.h>
 using namespace std;
-
-#define endl ("\n")
-#define pi (3.141592653589)
-#define mod 1000000007
-#define float double
-#define pb push_back
-#define mp make_pair
-#define ff first
-#define ss second
-#define all(c) c.begin(), c.end()
-#define min3(a, b, c) min(c, min(a, b))
-#define min4(a, b, c, d) min(d, min(c, min(a, b)))
-#define rrep(i, n) for(int i=n-1;i>=0;i--)
-#define rep(i,n) for(int i=0;i<n;i++)
-#define fast ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr)
-
-struct debugger
-{
-    template<typename T> debugger& operator , (const T& v)
-    {
-        cerr<<v<<" ";
-        return *this;
-    }
-} dbg;
-
-int32_t main()
-{
-    fast;
+long long ans,a[100005];
+int main() {
 	int t;
-	cin >> t;
+	scanf("%d",&t);
 	while(t--){
-        int t1; cin >> t1;
-        vector<int> x;
-        while(t1--){
-            int n;
-            cin >> n;
-            x.push_back(n);
-        }
-        if (*max_element(x.begin(), x.end()) < 0){
-            sort(x.begin(), x.end());
-            reverse(x.begin(), x.end());
-            int res = 1;
-            for(int i = 0; i < 5; i++){
-                res *= x[i];
-            }
-            cout << res;
-        }
+		int n;
+		long long mx=-1e9;
+		scanf("%d",&n);
+		for(int i=1;i<=n;i++)scanf("%lld",&a[i]),mx=max(mx,a[i]);
+		sort(a+1,a+n+1,[](long long x,long long y){return abs(x)>abs(y);});
+		if(mx<0){
+		    cout<<a[n]*a[n-1]*a[n-2]*a[n-3]*a[n-4]<<'\n';
+		    continue;
+		}
+		ans=a[1]*a[2]*a[3]*a[4]*a[5];
+		for(int i=6;i<=n;i++){
+		    for(int j=1;j<=5;j++){
+		        long long tmp=a[i];
+		        for(int k=1;k<=5;k++){
+		            if(k!=j)tmp*=a[k];
+		        }
+		        ans=max(ans,tmp);
+		    }
+		}
+		printf("%lld\n",ans);
 	}
+    return 0;
 }
-
-
