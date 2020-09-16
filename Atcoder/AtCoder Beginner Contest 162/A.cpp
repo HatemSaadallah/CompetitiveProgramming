@@ -1,4 +1,3 @@
-// Create your own template by modifying this file!
 #include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
@@ -38,13 +37,20 @@ struct debugger
 
 int32_t main() 
 {
-    fast
-	int t;
+    fast;
+	string t;
 	cin >> t;
-	while(t--){
-		
-	}
-	cout << t;
+	bool flag = false;
+    for(auto num: t){
+        if (num == '7'){
+            flag = true;
+        }
+    }
+    if(flag){
+        cout << "Yes";
+    } else {
+        cout << "No";
+    }
 }
 
 

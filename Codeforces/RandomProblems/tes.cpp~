@@ -1,4 +1,3 @@
-// Create your own template by modifying this file!
 #include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
@@ -38,13 +37,15 @@ struct debugger
 
 int32_t main() 
 {
-    fast
+    fast;
 	int t;
 	cin >> t;
 	while(t--){
-		
+		int n;
+		cin >> n;
+		cout << n*n;		
 	}
-	cout << t;
 }
+
 
 

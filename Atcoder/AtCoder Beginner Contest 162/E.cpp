@@ -1,4 +1,3 @@
-// Create your own template by modifying this file!
 #include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
@@ -36,15 +35,43 @@ struct debugger
     }
 } dbg;
 
-int32_t main() 
-{
-    fast
-	int t;
-	cin >> t;
-	while(t--){
-		
-	}
-	cout << t;
+int dp[100005];
+
+
+double power(int a, int b){
+    if (b==0)
+        return 1LL;
+    if(b==1)
+        return a*1LL;
+    if(b%2==0){
+        int x = power(a, b/2);
+        x=(x*x)%mod;
+        return x;
+    }
+    else{
+        int x=power(a, (b-1)/2);
+        x=(x*x)%mod;
+        return (x*a)%mod;
+    }
 }
 
+int32_t main() 
+{
+    fast;
+   
+	int n, k;
+    cin >> n >> k;
+    for(int i=k; i>=1; i--){
+        dp[i] = power(k/i, n);
+        for(int j=2*i; j <= k; j+=i){
+            dp[i] -= dp[j];
+        }
+    }
+    int res = 0;
+    for(int i = 1; i <= k; i++){
+        res = (res+(dp[i]*i)%mod)%mod;
+    }
+    cout << res%mod;
 
+    return 0;
+}

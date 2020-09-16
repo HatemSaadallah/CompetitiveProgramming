@@ -1,4 +1,3 @@
-// Create your own template by modifying this file!
 #include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
@@ -38,13 +37,16 @@ struct debugger
 
 int32_t main() 
 {
-    fast
+    fast;
 	int t;
 	cin >> t;
-	while(t--){
-		
-	}
-	cout << t;
+	int sum = 0;
+    for(int i = 1; i <= t; i++){
+        if (i % 3 != 0 && i%5 != 0){
+            sum += i;
+        }
+    }
+    cout << sum;
 }
 
 
