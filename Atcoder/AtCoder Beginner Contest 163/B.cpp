@@ -38,11 +38,19 @@ struct debugger
 int32_t main() 
 {
     fast;
-	int t;
-	cin >> t;
-	while(t--){
-		
-	}
+	int N, M;
+    cin >> N >> M;
+    int number = 0;
+    while(M--){
+        int n; cin >> n;
+        number+=n;
+    }
+    if(number > N){
+        cout << -1 << endl;
+    } else{
+        cout << N-number << endl;
+    }
+
 }
 
 

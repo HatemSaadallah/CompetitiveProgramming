@@ -8,6 +8,8 @@
 #include <sstream>
 #include <iterator>
 
+
+
 using namespace std;
 
 #define endl ("\n")
@@ -38,11 +40,23 @@ struct debugger
 int32_t main() 
 {
     fast;
-	int t;
-	cin >> t;
-	while(t--){
-		
-	}
+	int N;
+	cin >> N;
+    int bigBoss = 0;
+    int subs[N-1];
+    fill(subs, subs+N-1, 0);
+    for(int i = 2; i <= N; i++){
+        int n;
+        cin >> n;
+        if(n==1) bigBoss++;
+        else {
+            subs[n-2]++;
+        }
+    }
+    cout << bigBoss << endl;
+    for(int thing: subs){
+        cout << thing << endl;
+    }
 }
 
 
