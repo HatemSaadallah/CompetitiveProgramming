@@ -1,5 +1,5 @@
 /*input
-1000 15 80
+
 */
 #include <bits/stdc++.h>
 #include <iostream>
@@ -16,7 +16,7 @@ using namespace std;
 #define endl ("\n")
 #define pi (3.141592653589)
 #define mod 1000000007
-#define int long long
+#define int int64_t
 #define float double
 #define pb push_back
 #define mp make_pair
@@ -41,10 +41,12 @@ struct debugger
 int32_t main() 
 {
     fast;
-    double D, T, S;
-    cin >> D >> T >> S;
-    if (D/S <= T) cout << "Yes";
-    else cout << "No";
+	int A, B, C;
+	cin >> A >> B >> C;
+	int res = B / A;
+	if (res > C) cout << C;
+	else cout << res;
 }
+
 
 

@@ -1,5 +1,5 @@
 /*input
-1000 15 80
+
 */
 #include <bits/stdc++.h>
 #include <iostream>
@@ -16,7 +16,7 @@ using namespace std;
 #define endl ("\n")
 #define pi (3.141592653589)
 #define mod 1000000007
-#define int long long
+#define int int64_t
 #define float double
 #define pb push_back
 #define mp make_pair
@@ -31,20 +31,32 @@ using namespace std;
 
 struct debugger
 {
-    template<typename T> debugger& operator , (const T& v)
-    {    
-        cerr<<v<<" ";    
-        return *this;    
-    }
+	template<typename T> debugger& operator , (const T& v)
+	{    
+		cerr<<v<<" ";    
+		return *this;    
+	}
 } dbg;
+
+void dcommon(int num1, int num2) {
+
+	
+}
 
 int32_t main() 
 {
-    fast;
-    double D, T, S;
-    cin >> D >> T >> S;
-    if (D/S <= T) cout << "Yes";
-    else cout << "No";
+	fast;
+	int A, B, K;
+	cin >> A >> B >> K;
+	vector<int> x;
+	for (int i=1; i<=A+B; i++) {
+		if (A%i==0 && B%i==0) {
+			x.push_back(i);
+		}
+	}
+	reverse(x.begin(), x.end());
+	cout << x[K-1];
 }
+
 
 

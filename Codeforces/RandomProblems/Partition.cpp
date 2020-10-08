@@ -1,6 +1,11 @@
-/*input
-1000 15 80
-*/
+
+// Problem : A. Partition
+// Contest : Codeforces - Educational Codeforces Round 39 (Rated for Div. 2)
+// URL : https://codeforces.com/contest/946/problem/A
+// Memory Limit : 256 MB
+// Time Limit : 1000 ms
+// Powered by CP Editor (https://github.com/cpeditor/cpeditor)
+
 #include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
@@ -16,7 +21,7 @@ using namespace std;
 #define endl ("\n")
 #define pi (3.141592653589)
 #define mod 1000000007
-#define int long long
+#define int int64_t
 #define float double
 #define pb push_back
 #define mp make_pair
@@ -41,10 +46,17 @@ struct debugger
 int32_t main() 
 {
     fast;
-    double D, T, S;
-    cin >> D >> T >> S;
-    if (D/S <= T) cout << "Yes";
-    else cout << "No";
+	int t;
+	cin >> t;
+	vector<int> xpos;
+	vector<int> xneg;
+	while(t--){
+		int n;
+		cin >> n;
+		((n > 0) ? xpos.push_back(n) : xneg.push_back(n));
+	}
+	int res = accumulate(xpos.begin(), xpos.end(), 0) - accumulate(xneg.begin(), xneg.end(), 0);
+	cout << res;	
 }
 
 

@@ -1,6 +1,11 @@
-/*input
-1000 15 80
-*/
+
+// Problem : Sales by Match
+// Contest : HackerRank - Interview Preparation Kit - Warm-up Challenges
+// URL : https://www.hackerrank.com/challenges/sock-merchant/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup
+// Memory Limit : 512 MB
+// Time Limit : 4000 ms
+// Powered by CP Editor (https://github.com/cpeditor/cpeditor)
+
 #include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
@@ -10,13 +15,14 @@
 #include <math.h>
 #include <sstream>
 #include <iterator>
+#include <unordered_map>
 
 using namespace std;
 
 #define endl ("\n")
 #define pi (3.141592653589)
 #define mod 1000000007
-#define int long long
+#define int int64_t
 #define float double
 #define pb push_back
 #define mp make_pair
@@ -41,10 +47,22 @@ struct debugger
 int32_t main() 
 {
     fast;
-    double D, T, S;
-    cin >> D >> T >> S;
-    if (D/S <= T) cout << "Yes";
-    else cout << "No";
+	int t;
+	cin >> t;
+	unordered_map<int, int> x;
+	while(t--){
+		int n;
+		cin >> n;
+		if (x.find(n) == x.end()) 
+        	x[n] = 1;
+    	else
+        	x[n]++; 
+	}
+	int res = 0;
+	for(auto thing: x){
+		res += floor(thing.second/2);
+	}
+	cout << res;
 }
 
 
