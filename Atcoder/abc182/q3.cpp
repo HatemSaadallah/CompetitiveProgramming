@@ -34,27 +34,52 @@ using namespace std;
 
 struct debugger
 {
-    template<typename T> debugger& operator , (const T& v)
-    {    
-        cerr<<v<<" ";    
-        return *this;    
-    }
+	template<typename T> debugger& operator , (const T& v)
+	{    
+		cerr<<v<<" ";    
+		return *this;    
+	}
 } dbg;
 
 bool check_key(map<int, int> m, int key) 
 { 
-    if (m.find(key) == m.end()) 
-        return false; 
-  
-    return true; 
+	if (m.find(key) == m.end()) 
+		return false; 
+
+	return true; 
+} 
+
+int check(string str) 
+{ 
+	int n = str.length(); 
+	int digitSum = 0; 
+	for (int i=0; i<n; i++) 
+		digitSum += (str[i]-'0'); 
+
+	return (digitSum % 3 == 0); 
 } 
 
 int32_t main() 
 {
-    fast;
-	int t;
-	cin >> t;
-	rep(i, t){
-    	
+	fast;
+	string N;
+	cin >> N;
+	int res = 12345;
+	int deleted = 0;
+	for (int i = 1; i < pow(2, N.length()); i++) {
+		int sum = 0;
+		deleted = 0;
+		for (int j = 0; j < N.length(); j++) {
+			if (i >> j & 1) {
+				sum += N[j] - '0';
+			} else {
+				deleted++;
+			}
+		}
+		if(sum % 3 == 0 && sum > 0) {
+			res = min(res, deleted);
+		}
 	}
+	cout << (res == 12345 ? -1 : res) ;
 }
+

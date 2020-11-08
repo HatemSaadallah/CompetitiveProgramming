@@ -34,27 +34,52 @@ using namespace std;
 
 struct debugger
 {
-    template<typename T> debugger& operator , (const T& v)
-    {    
-        cerr<<v<<" ";    
-        return *this;    
-    }
+	template<typename T> debugger& operator , (const T& v)
+	{    
+		cerr<<v<<" ";    
+		return *this;    
+	}
 } dbg;
 
 bool check_key(map<int, int> m, int key) 
 { 
-    if (m.find(key) == m.end()) 
-        return false; 
-  
-    return true; 
+	if (m.find(key) == m.end()) 
+		return false; 
+
+	return true; 
 } 
 
 int32_t main() 
 {
-    fast;
-	int t;
+	fast;
+	int t = 0;
+	int maxNum = 0;
 	cin >> t;
-	rep(i, t){
-    	
+	vector<int> x(t, 0);
+	for(int i=0; i<t; i++){
+		int n;
+		cin >> n;
+		x[i] = n;
+		if(maxNum < x[i]){
+			maxNum = x[i];
+		}
 	}
+
+	int res = 1;
+	int value = 0;
+	for(int j=2; j<maxNum+1; j++){
+		int cValue = 0;
+		for(int i=0; i<t; i++){
+			if(x[i] % j == 0){
+				cValue += 1;
+			}
+		}
+		if(cValue >= value){
+			res = j;
+			value = cValue;
+		}
+	}
+	cout << res;
+	return 0;
 }
+

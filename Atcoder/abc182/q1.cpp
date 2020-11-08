@@ -52,9 +52,8 @@ bool check_key(map<int, int> m, int key)
 int32_t main() 
 {
     fast;
-	int t;
-	cin >> t;
-	rep(i, t){
-    	
-	}
+	int a, b;
+	cin >> a >> b;
+	int res = (2*a+100)-b;
+	cout << res;
 }
