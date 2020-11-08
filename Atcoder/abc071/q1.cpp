@@ -1,3 +1,6 @@
+/*input
+
+*/
 #include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
@@ -38,11 +41,10 @@ struct debugger
 int32_t main() 
 {
     fast;
-	int t;
-	cin >> t;
-	while(t--){
-		
-	}
+    int x, a, b;
+    cin >> x >> a >> b;
+    abs(x-a)<abs(x-b) ? cout << 'A' : cout << 'B';
 }
+
 
 

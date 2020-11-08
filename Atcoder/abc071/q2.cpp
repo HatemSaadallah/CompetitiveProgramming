@@ -11,9 +11,7 @@
 #include <sstream>
 #include <iterator>
 #include <cstdlib>
-#include <unordered_map>
 #include <map>
-
 using namespace std;
 
 #define endl ("\n")
@@ -41,7 +39,7 @@ struct debugger
     }
 } dbg;
 
-bool check_key(map<int, int> m, int key) 
+bool check_key(map<char, int> m, char key) 
 { 
     if (m.find(key) == m.end()) 
         return false; 
@@ -51,12 +49,29 @@ bool check_key(map<int, int> m, int key)
 
 int32_t main() 
 {
-    fast;
-	int t;
+	fast;
+	string t;
 	cin >> t;
-	rep(i, t){
-        		
+	map<char, int> x;
+	rep(i, t.length()){
+		if(check_key(x, t[i]))
+			x[t[i]]++;
+		else
+			x[t[i]] = 1;
 	}
+	vector<bool> output(26, NULL);
+	for(auto thing: x){
+		output[thing.first-97] = true;
+	}
+	rep(i, 26){
+		if (output[i] == 0){
+			cout << (char)(i+97);
+			return 0;
+		}
+	}
+	cout << "None";
+	return 0;
 }
+
 
 
