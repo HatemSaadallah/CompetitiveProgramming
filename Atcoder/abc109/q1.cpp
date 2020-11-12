@@ -35,33 +35,33 @@ using namespace std;
 struct debugger
 {
     template<typename T> debugger& operator , (const T& v)
-    {    
-        cerr<<v<<" ";    
-        return *this;    
+    {
+        cerr<<v<<" ";
+        return *this;
     }
 } dbg;
 
-bool check_key(map<int, int> m, int key) 
-{ 
-    if (m.find(key) == m.end()) 
-        return false; 
-  
-    return true; 
-} 
+bool check_key(map<int, int> m, int key)
+{
+    if (m.find(key) == m.end())
+        return false;
 
-int32_t main() 
+    return true;
+}
+
+int32_t main()
 {
     fast;
-	int t;
-	cin >> t;
-	int res = 0;
-  rep(i, t){
-    int f1, f2, f3;
-    cin >> f1 >> f2 >> f3;
-    if(f1+f2+f3>=2){
-        res++;
-    }
+	int a, b;
+	cin >> a >> b;
+	for(int i=1; i < 4; i++){
+        if(a*b*i % 2 != 0){
+            cout << "Yes";
+            return 0;
+        } else{
+            continue;
+        }
 	}
-  cout << res;
-  return 0;
+	cout << "No";
+	return 0;
 }

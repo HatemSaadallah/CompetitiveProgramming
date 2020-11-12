@@ -54,14 +54,7 @@ int32_t main()
     fast;
 	int t;
 	cin >> t;
-	int res = 0;
-  rep(i, t){
-    int f1, f2, f3;
-    cin >> f1 >> f2 >> f3;
-    if(f1+f2+f3>=2){
-        res++;
-    }
+	rep(i, t){
+    	
 	}
-  cout << res;
-  return 0;
 }

@@ -52,16 +52,25 @@ bool check_key(map<int, int> m, int key)
 int32_t main() 
 {
     fast;
-	int t;
-	cin >> t;
-	int res = 0;
-  rep(i, t){
-    int f1, f2, f3;
-    cin >> f1 >> f2 >> f3;
-    if(f1+f2+f3>=2){
-        res++;
-    }
+	int N, X;
+	cin >> N >> X;
+	vector<int> x;
+	rep(i, N){
+		int n;
+		cin >> n;
+		x.pb(n);
 	}
-  cout << res;
-  return 0;
+	rep(i, N){
+		x[i] = abs(x[i]-X);
+	}
+
+	int res = x[0];
+
+	rep(i, N){
+		res = min(res, __gcd(res, x[i]));
+	}
+
+	cout << res;
+	return 0;
 }
+

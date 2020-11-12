@@ -54,14 +54,30 @@ int32_t main()
     fast;
 	int t;
 	cin >> t;
-	int res = 0;
-  rep(i, t){
-    int f1, f2, f3;
-    cin >> f1 >> f2 >> f3;
-    if(f1+f2+f3>=2){
-        res++;
-    }
+	vector<string> x;
+	rep(i, t){
+    string word;
+		cin >> word;
+		x.pb(word);
 	}
-  cout << res;
-  return 0;
+	for(auto thing: x){
+		if (count(x.begin(), x.end(), thing) > 1){
+				cout << "No";
+				return 0;
+			}
+	}
+	char lastChar = x[0][x[0].length()-1];
+	for(int i=1; i < x.size(); i++){
+		//cout << x[i][0];
+		if(x[i][0] != lastChar){
+			cout << "No";
+			return 0;
+		} else {
+			lastChar = x[i][x[i].length()-1];
+			continue;
+		}
+	}
+	cout << "Yes";
+	return 0;
 }
+

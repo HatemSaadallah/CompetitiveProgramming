@@ -52,16 +52,14 @@ bool check_key(map<int, int> m, int key)
 int32_t main() 
 {
     fast;
-	int t;
-	cin >> t;
-	int res = 0;
-  rep(i, t){
-    int f1, f2, f3;
-    cin >> f1 >> f2 >> f3;
-    if(f1+f2+f3>=2){
-        res++;
-    }
-	}
-  cout << res;
+	int b1, b2;
+	cin >> b1 >> b2;
+  int res = 0;
+  while(b1<=b2){
+      b1*=3;
+      b2*=2;
+      res++;
+  }
+  cout << res << endl;
   return 0;
 }

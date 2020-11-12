@@ -49,19 +49,41 @@ bool check_key(map<int, int> m, int key)
     return true; 
 } 
 
+string getPalindrome(string str) { 
+  
+  unordered_map<char, int> hmap; 
+  for (int i = 0; i < str.length(); i++) 
+    hmap[str[i]]++; 
+
+  int oddCount = 0; 
+  char oddChar; 
+  for (auto x : hmap) { 
+    if (x.second % 2 != 0) { 
+      oddCount++; 
+      oddChar = x.first; 
+    } 
+  } 
+
+  if (oddCount > 1 || oddCount == 1 &&  
+                  str.length() % 2 == 0) 
+    return "NO SOLUTION"; 
+  
+  string firstHalf = "", secondHalf = ""; 
+  for (auto x : hmap) { 
+    string s(x.second / 2, x.first); 
+    firstHalf = firstHalf + s; 
+    secondHalf = s + secondHalf; 
+  } 
+  
+  return (oddCount == 1) ?  
+         (firstHalf + oddChar + secondHalf) : 
+         (firstHalf + secondHalf); 
+} 
 int32_t main() 
 {
     fast;
-	int t;
-	cin >> t;
-	int res = 0;
-  rep(i, t){
-    int f1, f2, f3;
-    cin >> f1 >> f2 >> f3;
-    if(f1+f2+f3>=2){
-        res++;
-    }
-	}
-  cout << res;
-  return 0;
+    string t;
+    cin >> t;
+    cout << getPalindrome(t);
+
 }
