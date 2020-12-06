@@ -84,5 +84,8 @@ int32_t main()
         } else if(i%2==0){
             cout << "I love it ";
         }
+        if(i!=t){
+            cout << " that ";
+        }
 	}
 }
