@@ -83,6 +83,7 @@ int32_t main()
 	rep(i, n-1){
         if(s[i] == 'B' && s[i+1] == 'G' && t != 0){
             swap(s[i], s[i+1]);
+            t--;
         }
 	}
 	cout << s;
