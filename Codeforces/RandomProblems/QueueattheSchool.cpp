@@ -80,7 +80,9 @@ int32_t main()
 	cin >> n >> t;
 	string s;
 	cin >> s;
-	rep(i, t){
+	rep(i, n-1){
+        if(s[i] == 'B' && s[i+1] == 'G'){
 
+        }
 	}
 }
