@@ -80,10 +80,13 @@ int32_t main()
 	cin >> n >> t;
 	string s;
 	cin >> s;
+	int flag = 0;
 	rep(i, n-1){
         if(s[i] == 'B' && s[i+1] == 'G'){
             swap(s[i], s[i+1]);
+            flag = 1;
         }
+
 	}
 	cout << s;
 	return 0;
