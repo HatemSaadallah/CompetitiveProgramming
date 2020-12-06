@@ -57,7 +57,7 @@ vector<int> SieveOfEratosthenes(int n)
 
 
     vector<int> res;
-    for (int p=2; p*p<=n; p++)
+    for (int p=2; p*p<=n;ma p++)
     {
         if (prime[p] == true)
         {
@@ -76,9 +76,10 @@ vector<int> SieveOfEratosthenes(int n)
 int32_t main()
 {
     fast;
-	int t;
-	cin >> t;
-	rep(i, t){
+	int n;
+	cin >> n;
+	int res=6987268688401;
 
-	}
+	cout << res;
 }
+

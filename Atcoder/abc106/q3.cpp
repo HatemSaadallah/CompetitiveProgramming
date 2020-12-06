@@ -1,3 +1,4 @@
+
 /*input
 
 */
@@ -19,7 +20,7 @@ using namespace std;
 #define endl ("\n")
 #define pi (3.141592653589)
 #define mod 1000000007
-#define int int64_t
+#define int long long
 #define float double
 #define pb push_back
 #define mp make_pair
@@ -49,36 +50,20 @@ bool check_key(map<int, int> m, int key)
     return true;
 }
 
-
-vector<int> SieveOfEratosthenes(int n)
-{
-    bool prime[n+1];
-    memset(prime, true, sizeof(prime));
-
-
-    vector<int> res;
-    for (int p=2; p*p<=n; p++)
-    {
-        if (prime[p] == true)
-        {
-            for (int i=p*p; i<=n; i += p)
-                prime[i] = false;
-        }
-    }
-
-    for (int p=2; p<=n; p++)
-        if (prime[p])
-            res.push_back(p);
-    //cout << p << " ";
-    return res;
-}
-
 int32_t main()
 {
     fast;
-	int t;
-	cin >> t;
-	rep(i, t){
-
+	string s;
+	cin >> s;
+	int k;
+	cin >> k;
+	for(int i = 0; i < k; i++){
+        if(s[i] != '1'){
+            cout << s[i];
+            return 0;
+        }
 	}
+	cout << '1' << endl;
+    return 0;
+	return 0;
 }

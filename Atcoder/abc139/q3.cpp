@@ -35,50 +35,45 @@ using namespace std;
 struct debugger
 {
     template<typename T> debugger& operator , (const T& v)
-    {
-        cerr<<v<<" ";
-        return *this;
+    {    
+        cerr<<v<<" ";    
+        return *this;    
     }
 } dbg;
 
-bool check_key(map<int, int> m, int key)
-{
-    if (m.find(key) == m.end())
-        return false;
+bool check_key(map<int, int> m, int key) 
+{ 
+    if (m.find(key) == m.end()) 
+        return false; 
+  
+    return true; 
+} 
 
-    return true;
-}
-
-
-vector<int> SieveOfEratosthenes(int n)
-{
-    bool prime[n+1];
-    memset(prime, true, sizeof(prime));
-
-
-    vector<int> res;
-    for (int p=2; p*p<=n; p++)
-    {
-        if (prime[p] == true)
-        {
-            for (int i=p*p; i<=n; i += p)
-                prime[i] = false;
-        }
-    }
-
-    for (int p=2; p<=n; p++)
-        if (prime[p])
-            res.push_back(p);
-    //cout << p << " ";
-    return res;
-}
-
-int32_t main()
+int32_t main() 
 {
     fast;
 	int t;
 	cin >> t;
+    vector<int> x;
 	rep(i, t){
-
+        int n;
+        cin >> n;
+        x.pb(n);
 	}
+    int max = 0;
+    int temp = 0;
+    for(int i=0;i<t-1;i++){
+        if(x[i]>=x[i+1]){
+            temp++;
+            //cout << "Here's temp: " << temp << endl; 
+        } 
+        if(temp>=max){
+            max=temp;
+        }
+        if(x[i]<x[i+1]){
+            temp=0;
+        } 
+    }
+    cout << max;
+    return 0;
 }

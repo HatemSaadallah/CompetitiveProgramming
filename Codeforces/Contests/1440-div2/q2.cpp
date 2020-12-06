@@ -35,50 +35,38 @@ using namespace std;
 struct debugger
 {
     template<typename T> debugger& operator , (const T& v)
-    {
-        cerr<<v<<" ";
-        return *this;
+    {    
+        cerr<<v<<" ";    
+        return *this;    
     }
 } dbg;
 
-bool check_key(map<int, int> m, int key)
-{
-    if (m.find(key) == m.end())
-        return false;
+bool check_key(map<int, int> m, int key) 
+{ 
+    if (m.find(key) == m.end()) 
+        return false; 
+  
+    return true; 
+} 
 
-    return true;
-}
-
-
-vector<int> SieveOfEratosthenes(int n)
-{
-    bool prime[n+1];
-    memset(prime, true, sizeof(prime));
-
-
-    vector<int> res;
-    for (int p=2; p*p<=n; p++)
-    {
-        if (prime[p] == true)
-        {
-            for (int i=p*p; i<=n; i += p)
-                prime[i] = false;
-        }
+void solve(int n, int k){
+    vector<int> x;
+    rep(i, k*n){
+        int number;
+        cin >> number;
+        x.push_back(number);
     }
 
-    for (int p=2; p<=n; p++)
-        if (prime[p])
-            res.push_back(p);
-    //cout << p << " ";
-    return res;
 }
 
-int32_t main()
+int32_t main() 
 {
     fast;
-	int t;
-	cin >> t;
-	rep(i, t){
-
-	}
+	  int t;
+	  cin >> t;
+	  rep(i, t){
+        int n, k;
+        cin >> n >> k;
+        solve(n, k);
+	  }
 }

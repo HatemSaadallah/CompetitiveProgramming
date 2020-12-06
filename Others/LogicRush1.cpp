@@ -49,8 +49,7 @@ bool check_key(map<int, int> m, int key)
     return true;
 }
 
-
-vector<int> SieveOfEratosthenes(int n)
+vector<int> primeSieve(int n)
 {
     bool prime[n+1];
     memset(prime, true, sizeof(prime));
@@ -69,16 +68,32 @@ vector<int> SieveOfEratosthenes(int n)
     for (int p=2; p<=n; p++)
         if (prime[p])
             res.push_back(p);
-    //cout << p << " ";
+
     return res;
 }
+
 
 int32_t main()
 {
     fast;
-	int t;
-	cin >> t;
-	rep(i, t){
+	int x;
+//	for(auto num: primeSieve(pow(10, 6))){
+//        cout << (int)num << endl;
+//	}
+	vector<int> primes = primeSieve(pow(10, 6));
 
-	}
+    for(int i=0; i < primes.size(); i++){
+        for(int j=0; j < primes.size(); j++){
+            cout << "Testing: " << primes[i] << " and " << primes[j] << endl;
+            if(i!=j && primes[i]+primes[j] == 1000000009){
+                cout << primes[i] << " " << primes[j];
+                return 0;
+            }
+        }
+    }
+
+//    cout << primes.size();
+//    cout << primes[2];
+
+//    for(int i=0; i < )
 }

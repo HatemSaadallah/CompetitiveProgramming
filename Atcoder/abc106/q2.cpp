@@ -1,3 +1,4 @@
+
 /*input
 
 */
@@ -49,36 +50,31 @@ bool check_key(map<int, int> m, int key)
     return true;
 }
 
-
-vector<int> SieveOfEratosthenes(int n)
+int countDivisors(int n)
 {
-    bool prime[n+1];
-    memset(prime, true, sizeof(prime));
+    int cnt = 0;
+    for (int i = 1; i <= sqrt(n); i++) {
+        if (n % i == 0) {
+            if (n / i == i)
+                cnt++;
 
-
-    vector<int> res;
-    for (int p=2; p*p<=n; p++)
-    {
-        if (prime[p] == true)
-        {
-            for (int i=p*p; i<=n; i += p)
-                prime[i] = false;
+            else
+                cnt = cnt + 2;
         }
     }
-
-    for (int p=2; p<=n; p++)
-        if (prime[p])
-            res.push_back(p);
-    //cout << p << " ";
-    return res;
+    return cnt;
 }
 
 int32_t main()
 {
     fast;
-	int t;
-	cin >> t;
-	rep(i, t){
-
+	int n;
+	cin >> n;
+	int res = 0;
+	for(int i=1; i <= n; i+=2){
+        if (countDivisors(i) == 8){
+            res++;
+        }
 	}
+	cout << res;
 }

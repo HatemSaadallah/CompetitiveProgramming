@@ -1,3 +1,4 @@
+
 /*input
 
 */
@@ -49,36 +50,27 @@ bool check_key(map<int, int> m, int key)
     return true;
 }
 
-
-vector<int> SieveOfEratosthenes(int n)
-{
-    bool prime[n+1];
-    memset(prime, true, sizeof(prime));
-
-
-    vector<int> res;
-    for (int p=2; p*p<=n; p++)
-    {
-        if (prime[p] == true)
-        {
-            for (int i=p*p; i<=n; i += p)
-                prime[i] = false;
-        }
-    }
-
-    for (int p=2; p<=n; p++)
-        if (prime[p])
-            res.push_back(p);
-    //cout << p << " ";
-    return res;
-}
-
 int32_t main()
 {
     fast;
 	int t;
-	cin >> t;
-	rep(i, t){
-
+	vector<int> x;
+	rep(i, 4){
+	    int n;
+	    cin >> n;
+        x.push_back(n);
 	}
+	sort(x.begin(), x.end());
+
+	int abc = x[3];
+	int ab = x[2];
+
+	int c = abc-ab;
+
+	int ac = x[1];
+	int a = ac-c;
+	int bc = x[0];
+	int b = bc - c;
+
+	cout << a << " " << b << " " << c;
 }
