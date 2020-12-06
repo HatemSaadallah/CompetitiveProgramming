@@ -89,7 +89,7 @@ int32_t main()
         if(s[i] == 'B' && s[i+1] == 'G' && flag==0){
             swap(s[i], s[i+1]);
             flag = 1;
-            }
+        }
 	}
 	cout << s;
 	return 0;
