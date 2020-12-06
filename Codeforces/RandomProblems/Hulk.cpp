@@ -78,7 +78,11 @@ int32_t main()
     fast;
 	int t;
 	cin >> t;
-	rep(i, t){
-
+	for(int i=1; i <= t; i++){
+        if(i%2==1){
+            cout << "I hate it";
+        } else if(i%2==0){
+            cout << "I love it";
+        }
 	}
 }
