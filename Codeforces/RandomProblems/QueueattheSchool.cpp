@@ -82,14 +82,14 @@ int32_t main()
 	cin >> s;
 	int flag = 0;
 	rep(i, n-1){
-        if(s[i] == 'B' && s[i+1] == 'G' && flag==0){
-            swap(s[i], s[i+1]);
-            flag = 1;
-        }
-        if(flag){
+	    if(flag){
             flag=0;
             continue;
         }
+        if(s[i] == 'B' && s[i+1] == 'G' && flag==0){
+            swap(s[i], s[i+1]);
+            flag = 1;
+            }
 	}
 	cout << s;
 	return 0;
