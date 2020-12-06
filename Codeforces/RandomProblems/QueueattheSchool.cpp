@@ -85,4 +85,6 @@ int32_t main()
             swap(s[i], s[i+1]);
         }
 	}
+	cout << s;
+	return 0;
 }
