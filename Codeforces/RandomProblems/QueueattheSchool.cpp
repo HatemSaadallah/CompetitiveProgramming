@@ -76,8 +76,10 @@ vector<int> SieveOfEratosthenes(int n)
 int32_t main()
 {
     fast;
-	int t;
-	cin >> t;
+	int n, t;
+	cin >> n >> t;
+	string s;
+	cin >> s;
 	rep(i, t){
 
 	}
