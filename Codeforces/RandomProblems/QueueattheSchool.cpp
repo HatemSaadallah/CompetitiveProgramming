@@ -81,9 +81,8 @@ int32_t main()
 	string s;
 	cin >> s;
 	rep(i, n-1){
-        if(s[i] == 'B' && s[i+1] == 'G' && t > 0){
+        if(s[i] == 'B' && s[i+1] == 'G'){
             swap(s[i], s[i+1]);
-            t--;
         }
 	}
 	cout << s;
