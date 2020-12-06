@@ -82,7 +82,7 @@ int32_t main()
 	cin >> s;
 	rep(i, n-1){
         if(s[i] == 'B' && s[i+1] == 'G'){
-
+            swap(s[i], s[i+1]);
         }
 	}
 }
