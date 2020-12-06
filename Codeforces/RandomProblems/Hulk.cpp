@@ -85,7 +85,7 @@ int32_t main()
             cout << "I love it ";
         }
         if(i!=t){
-            cout << " that ";
+            cout << "that ";
         }
 	}
 }
