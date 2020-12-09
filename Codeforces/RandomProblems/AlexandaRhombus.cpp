@@ -77,10 +77,16 @@ vector<int> SieveOfEratosthenes(int n)
 int32_t main()
 {
     fast;
-	int t;
-	cin >> t;
-	rep(i, t){
-
+	int n;
+	cin >> n;
+	int x[99];
+	x[0] = 1;
+	for(int i=1; i < 100; i++){
+		x[i] = x[i-1] + (int)pow(2, i);
+	}
+	
+	for(int num: x){
+		cout << num << endl;
 	}
 }
 
