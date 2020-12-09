@@ -88,7 +88,7 @@ int32_t main()
 	}
 	int max = 1;
 	int streak = 0;
-	rep(i, t-1){
+	rep(i, t){
 		if(x[i]<x[i+1]){
 			streak++;
 		}
