@@ -87,7 +87,7 @@ int32_t main()
 		x.pb(n);
 	}
 	int max = 1;
-	int streak = 0;
+	int streak = 1;
 	rep(i, t-1){
 		if(x[i]<x[i+1]){
 			streak++;
