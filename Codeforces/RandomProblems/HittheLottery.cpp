@@ -101,7 +101,7 @@ int32_t main()
 		}
 		else if(n>=1){
 			res += n;
-			n--;
+			n=0;
 		}
 	}
 	cout << res;
