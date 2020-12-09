@@ -74,13 +74,20 @@ vector<int> SieveOfEratosthenes(int n)
     return res;
 }
 
+
 int32_t main()
 {
     fast;
 	int t;
 	cin >> t;
+	vector<int> x;
 	rep(i, t){
-
+		int n;
+		cin >> n;
+		x.pb(n);
+	}
+	rep(i, t-1){
+	
 	}
 }
 
