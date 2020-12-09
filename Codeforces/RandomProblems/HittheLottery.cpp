@@ -83,6 +83,7 @@ int32_t main()
 	cin >> n;
 	int res = 0;
 	while(n>0){
+		cout << "Worked!" << endl;
 		if(n>=100){
 			res += n/100;
 			n %= 100;
@@ -103,8 +104,7 @@ int32_t main()
 			res += n;
 			n=0;
 		}
-
 	}
-		cout << res;
+	cout << res;
 
 }
