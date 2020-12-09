@@ -92,7 +92,7 @@ int32_t main()
 		if(x[i]<x[i+1]){
 			streak++;
 		} else{
-			streak = 0;
+			streak = 1;
 		}
 		if(streak>max){
 			max = streak;
