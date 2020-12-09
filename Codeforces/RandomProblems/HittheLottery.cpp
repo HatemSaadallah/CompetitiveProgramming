@@ -104,5 +104,5 @@ int32_t main()
 			n = 0;
 		}
 	}
-	cout << n;
+	cout << res;
 }
