@@ -103,7 +103,8 @@ int32_t main()
 			res += n;
 			n=0;
 		}
-			cout << res;
 
 	}
+		cout << res;
+
 }
