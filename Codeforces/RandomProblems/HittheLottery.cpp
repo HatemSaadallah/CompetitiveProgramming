@@ -99,7 +99,7 @@ int32_t main()
 			res += n/5;
 			n -= n%5;
 		}
-		else if(n>1){
+		else if(n>=1){
 			res += n;
 			n = 0;
 		}
