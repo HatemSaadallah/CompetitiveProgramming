@@ -85,8 +85,6 @@ int32_t main()
 		x[i] = x[i-1] + pow(2, i+1);
 	}
 	
-	for(int num: x){
-		cout << num << endl;
-	}
+	cout << x[n+1];
 }
 
