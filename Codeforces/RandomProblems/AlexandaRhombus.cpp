@@ -20,7 +20,7 @@ using namespace std;
 #define endl ("\n")
 #define pi (3.141592653589)
 #define mod 1000000007
-#define int int64_t
+#define int long long
 #define float double
 #define pb push_back
 #define mp make_pair
@@ -82,7 +82,7 @@ int32_t main()
 	int x[100];
 	x[0] = 1;
 	for(int i=1; i < 100; i++){
-		x[i] = x[i-1] + (double)pow(2, i+1);
+		x[i] = x[i-1] + pow(2, i+1);
 	}
 	
 	for(int num: x){
