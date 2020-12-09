@@ -86,8 +86,16 @@ int32_t main()
 		cin >> n;
 		x.pb(n);
 	}
+	int max = 1;
+	int streak = 0;
 	rep(i, t-1){
-	
+		if(x[i]<x[i+1]){
+			streak++;
+		}
+		if(streak>max){
+			max = streak;
+		}
 	}
+	cout << max;
 }
 
