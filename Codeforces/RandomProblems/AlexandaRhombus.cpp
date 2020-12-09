@@ -20,7 +20,7 @@ using namespace std;
 #define endl ("\n")
 #define pi (3.141592653589)
 #define mod 1000000007
-#define int int
+#define int int64_t
 #define float double
 #define pb push_back
 #define mp make_pair
