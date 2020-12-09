@@ -74,36 +74,13 @@ vector<int> SieveOfEratosthenes(int n)
     return res;
 }
 
-
-
 int32_t main()
 {
     fast;
-	int n;
-	cin >> n;
-	int res = 0;
-	while(n>0){
-		if(n>=100){
-			res += n/100;
-			n %= 100;
-		}
-		else if(n>=20){
-			res += n/20;
-			n %= 20;
-		}
-		else if(n>=10){
-			res += n/10;
-			n %= 10;
-		}
-		else if(n>=5){
-			res += n/5;
-			n %= 5;
-		}
-		else if(n>=1){
-			res += n;
-			n=0;
-		}
-	}
-	cout << res;
+	int t;
+	cin >> t;
+	rep(i, t){
 
+	}
 }
+
