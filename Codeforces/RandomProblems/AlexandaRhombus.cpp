@@ -97,6 +97,5 @@ int32_t main()
 		sum += x[i];
 	}
 	cout << 2*sum+x[n-1];
-	cout << x[n-1];
 }
 
