@@ -74,6 +74,24 @@ vector<int> SieveOfEratosthenes(int n)
     return res;
 }
 
+vector<int> findSubarray(int n1, vector<int> x){
+	for(int z=0; z < n1; z++){
+		for(int z1=z; z1 < n1; z1++){
+			int sum = 0;
+			vector<int> output;
+			for(int z2=z; z2 <= z1; z2++){
+				sum += x[z2];
+				output.pb(x[z2]);
+			}
+			if(sum%2==0){
+				return output;
+			}
+		}
+	}
+	vector<int> rubbish = {};
+	return rubbish;
+}
+
 int32_t main()
 {
     fast;
@@ -88,17 +106,15 @@ int32_t main()
 			cin >> n;
 			x.pb(n);
 		}
-		for(int z=0; z < n1; z++){
-			for(int z1=z; z1 < n1; z1++){
-				int sum = 0;
-				for(int z2=z; z2 <= z1; z2++){
-					sum += x[z2];
-				}
-				if(sum%2==0){
-					cout << "found it";
-				}
+		if(findSubarray(n1, x).size()==0){
+			cout << -1;
+		} else {
+			cout << findSubarray(n1, x).size() << endl;
+			for(int num: findSubarray(n1, x)){
+				cout << num << " ";
 			}
 		}
+		
 		cout << endl;
 	}
 }
