@@ -81,10 +81,22 @@ int32_t main()
 	cin >> n;
 	int x[100];
 	x[0] = 1;
-	for(int i=1; i < 100; i++){
-		x[i] = x[i-1] + pow(2, i+1);
+	for(int i=1; i <= 100; i++){
+		x[i] = x[i-1]+2;
 	}
-	
+	int sum = 0;
+	if(n==1){
+		cout << 1;
+		return 0;
+	}
+	if(n==2){
+		cout << 5;
+		return 0;
+	}
+	for(int i=0; i <= n-2; i++){
+		sum += x[i];
+	}
+	cout << 2*sum+x[n-1];
 	cout << x[n-1];
 }
 
