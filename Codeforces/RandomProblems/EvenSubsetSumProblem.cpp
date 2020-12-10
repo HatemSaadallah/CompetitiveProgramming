@@ -99,6 +99,7 @@ int32_t main()
 					for(int j=z; j <= z1; j++){
 						cout << x[j] << " ";
 					}
+					return 0;
 				}
 			}
 		}
