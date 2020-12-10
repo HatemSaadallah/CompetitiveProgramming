@@ -97,7 +97,7 @@ int32_t main()
 				if(sum%2==0){
 					cout << abs(z-z1) << endl;
 					for(int j=z; j <= z1; j++){
-						cout << x[j] << " ";
+						cout << j << " ";
 						return 0;
 					}
 				}
