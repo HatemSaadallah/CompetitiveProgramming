@@ -89,17 +89,13 @@ int32_t main()
 			x.pb(n);
 		}
 		for(int z=0; z < n1; z++){
-			int sum = 0;
 			for(int z1=z; z1 < n1; z1++){
+				int sum = 0;
 				for(int z2=z; z2 <= z1; z2++){
 					sum += x[z2];
 				}
 				if(sum%2==0){
-					cout << abs(z-z1) << endl;
-					for(int j=z; j <= z1; j++){
-						cout << j+2 << " ";
-						return 0;
-					}
+					cout << "found it";
 				}
 			}
 		}
