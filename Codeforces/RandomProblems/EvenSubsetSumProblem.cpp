@@ -90,7 +90,7 @@ int32_t main()
 		}
 		for(int z=0; z < n1; z++){
 			for(int z1=z; z1 < n1; z1++){
-				for(int z2=z; z2 < z1; z2++){
+				for(int z2=z; z2 <= z1; z2++){
 					cout << x[z2] << " ";
 				}
 			}
