@@ -83,6 +83,11 @@ int32_t main()
 		int n1;
 		cin >> n1;
 		vector<int> x;
+		rep(b, n1){
+			int n;
+			cin >> n;
+			x.pb(n);
+		}
 		for(int z=0; z < n1; z++){
 			for(int z1=z; z1 < n1; z1++){
 				for(int z2=z; z2 < z1; z2++){
