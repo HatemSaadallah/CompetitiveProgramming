@@ -98,6 +98,7 @@ int32_t main()
 					cout << abs(z-z1) << endl;
 					for(int j=z; j <= z1; j++){
 						cout << x[j] << " ";
+						return 0;
 					}
 				}
 			}
