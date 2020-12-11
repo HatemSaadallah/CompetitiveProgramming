@@ -80,11 +80,16 @@ int32_t main()
 	int t;
 	cin >> t;
 	vector<int> x(t-1);
+	if(t == 1){
+		cout << 1;
+		return 0;
+	}
 	rep(i, t){
 		int n;
 		cin >> n;
 		x[i] = n;
 	}
+	
 	int streak = 1;
 	int max = 1;
 	for(int i=0; i < t-1; i++){
