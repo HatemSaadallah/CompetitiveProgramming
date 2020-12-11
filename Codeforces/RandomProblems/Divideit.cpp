@@ -96,6 +96,7 @@ int32_t main()
 			}
 			res++;
 		}
+		cout << res << endl;
 	}
 }
 
