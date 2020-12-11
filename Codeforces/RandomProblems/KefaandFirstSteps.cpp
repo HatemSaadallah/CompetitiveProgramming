@@ -79,8 +79,25 @@ int32_t main()
     fast;
 	int t;
 	cin >> t;
+	vector<int> x(t-1);
 	rep(i, t){
-
+		int n;
+		cin >> n;
+		x[i] = n;
 	}
+	int streak = 1;
+	int max = 1;
+	for(int i=0; i < t-1; i++){
+		if(x[i] < x[i+1]){
+			streak++;
+		} else{
+			streak = 1;
+		}
+		if(streak > max){
+			max = streak;
+		}
+	}
+	cout << max;
+	return 0;
 }
-km
+
