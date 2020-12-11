@@ -83,6 +83,7 @@ int32_t main()
 		int n;
 		cin >> n;
 		int res=0;
+		bool flag = true;
 		while(n>1){
 			if(n%2==0){
 				n/=2;
@@ -92,11 +93,13 @@ int32_t main()
 				n = 4*n/5;
 			} else{
 				cout << -1 << endl;
+				flag = false;
 				break;
 			}
 			res++;
 		}
-		cout << res << endl;
+		if(flag)
+			cout << res << endl;
 	}
 }
 
