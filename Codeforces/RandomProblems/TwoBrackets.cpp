@@ -80,7 +80,20 @@ int32_t main()
 	int t;
 	cin >> t;
 	rep(i, t){
-		
+		string n;
+		cin >> n;
+		int res=0;
+		rep(i, n.length()){
+			rep(j, n.length()){
+				if(n[i] == '(' && n[j] == ')' && j > i){
+					res++;
+				}
+				if(n[i] == '[' && n[j] == ']' && j > i){
+					res++;
+				}
+			}
+		}
+		cout << res << endl;
 	}
 }
 
