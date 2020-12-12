@@ -114,6 +114,7 @@ int32_t main()
 			res+=abs(1-neg[0]);
 		}
 	}
+	res+=zeros;
 	for(int i=0; i < positives; i++){
 		res+=abs(pos[i]-1);
 	}
