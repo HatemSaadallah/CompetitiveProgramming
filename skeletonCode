@@ -13,7 +13,7 @@
 #include <cstdlib>
 #include <unordered_map>
 #include <map>
-#include <list> 
+#include <list>
 
 using namespace std;
 
@@ -77,6 +77,10 @@ vector<int> SieveOfEratosthenes(int n)
 int32_t main()
 {
     fast;
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt", "r",stdin);
+        freopen("output.txt", "w", stdout);
+    #endif
 	int t;
 	cin >> t;
 	rep(i, t){
