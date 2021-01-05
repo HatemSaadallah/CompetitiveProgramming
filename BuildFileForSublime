@@ -1,0 +1,20 @@
+{
+	"shell_cmd": "g++ \"${file}\" -o \"${file_path}/${file_base_name}\"",
+	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+	"working_dir": "${file_path}",
+	"selector": "source.c, source.c++",
+
+	"variants":
+	[
+		{
+			"name": "Run",
+			"shell_cmd": "ulimit -s 100000 && g++ -DKHALIL -std=c++17 -O2 ${file} -o ${file_path}/${file_base_name} && ${file_path}/${file_base_name} < input.in >output.out"
+			},{
+			"name": "Run Only",
+			"shell_cmd": "timeout 5 ${file_path}/${file_base_name} < input.in >output.out"
+		},{
+			"name": "Debug",
+			"shell_cmd": "g++ -DKHALIL -std=c++17 -O2 -Wall -Wextra -pedantic -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2  -fsanitize=undefined -fno-sanitize-recover -fstack-protector ${file} -o ${file_path}/${file_base_name} && timeout 10 ${file_path}/${file_base_name} < input.in >output.out"
+		}
+	]
+}
