@@ -2,7 +2,7 @@
 
 */
 #include <bits/stdc++.h>
-#includes <iostream>
+#include <iostream>
 #include <vector>
 #include <string>
 #include <algorithm>
