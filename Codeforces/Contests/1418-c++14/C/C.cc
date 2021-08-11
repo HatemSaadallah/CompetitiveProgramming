@@ -38,6 +38,7 @@ struct debugger
 int32_t main() 
 {
     fast
+    dkfvndflk
         int t;
         cin >> t;
         while(t--){
